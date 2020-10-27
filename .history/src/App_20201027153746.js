@@ -1,13 +1,14 @@
+
 import './App.css';
-import CreateGarden from './components/CreateGarden'
+import Garden from './components/Garden';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        The Garden Tracker
+        Track your success
       </header>
-        <CreateGarden />
+      <Garden />
     </div>
   );
 }
