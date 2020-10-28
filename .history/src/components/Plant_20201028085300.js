@@ -1,8 +1,8 @@
 import { Component } from "react";
+import CreateNote from "./CreateNote";
 
 class Plant extends Component {
     state = {
-        name: '',
         notes: [],
         nutrients: []
     }

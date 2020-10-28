@@ -7,25 +7,17 @@ class CreateGarden extends Component{
 
     state = {
         plants: [],
-        nutrients: [],
-        archive: []
+        notes: [],
+        nutrients: []
     }
-
-    addPlant=(plant)=>{
-        return({
-        type: "ADD_PLANT",
-        plant
-        })
-    };
     
     render(){
         return(
             <div>
                 <Garden 
                 plants={this.state.plants} 
-                nutrients={this.state.nutrients}
-                archive={this.state.archive} 
-                addPlant={this.addPlant}/>
+                notes={this.state.notes} 
+                bugs={this.state.nutrients} />
             </div>
         )
     };

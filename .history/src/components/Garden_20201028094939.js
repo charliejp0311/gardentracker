@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CreatePlant from './CreatePlant';
-import PlantList from './plantList';
-import Archive from "./Archive";
+import plantList from './plantList';
 import {connect} from 'react-redux';
 
 
@@ -19,8 +18,7 @@ class Garden extends Component{
             <div className='garden-container' >
                 <h1>Growing is Life</h1>
                 <CreatePlant  />
-                <PlantList plants={this.state.plants} />
-                <Archive archive={this.state.archive} />
+                <plantList plants={this.state.plants} />
             </div>
         )
     }

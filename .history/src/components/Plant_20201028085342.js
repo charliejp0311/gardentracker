@@ -2,7 +2,6 @@ import { Component } from "react";
 
 class Plant extends Component {
     state = {
-        name: '',
         notes: [],
         nutrients: []
     }
