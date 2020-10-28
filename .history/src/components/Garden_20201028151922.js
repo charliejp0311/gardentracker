@@ -12,10 +12,10 @@ class Garden extends Component{
         harvest: []
     }
     addPlant=(plant)=>{
-        return(this.props.dispatch({
+        return({
         type: "ADD_PLANT",
         plant
-        }))
+        })
     };
 
     harvestPlant=(plant)=>{
@@ -25,11 +25,11 @@ class Garden extends Component{
         }
     }
     render(){
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div className='garden-container' >
                 <h1>Growing is Life</h1>
-                <CreatePlant addPlant={this.props.dispatch(this.addPlant)} harvestPlant={this.props.dispatch(this.harvestPlant)} />
+                <CreatePlant addPlant={this.addPlant} harvestPlant={this.harvestPlant} />
                 {/* <PlantList plants={this.state.plants} />
                 <Harvest harvest={this.state.harvest} /> */}
             </div>
@@ -42,5 +42,10 @@ const mapStateToProps=state=>{
         harvest: state.harvest,
     }
 }
-
-export default connect(mapStateToProps)(Garden);
+const mapDispatchToProps = dispatch => {
+    return{
+        // addPlant: dispatch(addPlant()),
+        // harvestPlant: dispatch(harvestPlant())
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Garden);

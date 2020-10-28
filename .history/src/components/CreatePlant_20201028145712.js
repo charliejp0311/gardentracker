@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 class CreatePlant extends Component {
     state = {
         name: '',
+        notes: [],
     }
 
     handleChange=e=>{
@@ -14,11 +15,6 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        console.log(this.props)
-        this.props.addPlant({name: this.state.name});
-        this.setState({
-            name: ''
-        })
 
     }
     render(){
@@ -31,18 +27,11 @@ class CreatePlant extends Component {
     }
 }
 
-const mapStateToProps = state => { 
-    return {
-        plants: state.garden.plants,
-        harvest: state.garden.harvest
+const mapDispatchToProps= dispatch => {
+    return{
+        // addPlant: dispatch(addPlant())
     }
 }
 
-// const mapDispatchToProps= dispatch => {
-//     return{
-//         // addPlant: dispatch(addPlant())
-//     }
-// }
 
-
-export default connect(mapStateToProps)(CreatePlant);
+export default connect(null,mapDispatchToProps)(CreatePlant);

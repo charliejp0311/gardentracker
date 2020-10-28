@@ -13,10 +13,15 @@ class CreateGarden extends Component{
         harvest: []
     }
 
+
+    
     render(){
         return(
             <div>
-                <Garden garden={this.state} />
+                <Garden 
+                garden={this.state} 
+                harvestPlant={this.harvestPlant}
+                addPlant={this.addPlant}/>
             </div>
         )
     };

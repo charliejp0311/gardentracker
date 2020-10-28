@@ -14,7 +14,7 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        console.log(this.props)
+        // debugger
         this.props.addPlant({name: this.state.name});
         this.setState({
             name: ''
@@ -22,6 +22,7 @@ class CreatePlant extends Component {
 
     }
     render(){
+        // console.log(this)
         return(
             <form onSubmit={this.handleSubmit}>
                 <input type='text' name='name' placeholder="Plant Name" onChange={this.handleChange}/>

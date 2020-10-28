@@ -14,7 +14,7 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        console.log(this.props)
+        debugger
         this.props.addPlant({name: this.state.name});
         this.setState({
             name: ''
@@ -38,11 +38,11 @@ const mapStateToProps = state => {
     }
 }
 
-// const mapDispatchToProps= dispatch => {
-//     return{
-//         // addPlant: dispatch(addPlant())
-//     }
-// }
+const mapDispatchToProps= dispatch => {
+    return{
+        // addPlant: dispatch(addPlant())
+    }
+}
 
 
-export default connect(mapStateToProps)(CreatePlant);
+export default connect(mapStateToProps,mapDispatchToProps)(CreatePlant);

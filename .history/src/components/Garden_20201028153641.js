@@ -29,7 +29,7 @@ class Garden extends Component{
         return(
             <div className='garden-container' >
                 <h1>Growing is Life</h1>
-                <CreatePlant addPlant={this.props.dispatch(this.addPlant)} harvestPlant={this.props.dispatch(this.harvestPlant)} />
+                <CreatePlant addPlant={this.props.dispatch(this.addPlant)} harvestPlant={this.harvestPlant} />
                 {/* <PlantList plants={this.state.plants} />
                 <Harvest harvest={this.state.harvest} /> */}
             </div>

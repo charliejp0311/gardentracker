@@ -14,7 +14,7 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        console.log(this.props)
+        console.log(this.props.addPlant(this.state))
         this.props.addPlant({name: this.state.name});
         this.setState({
             name: ''
