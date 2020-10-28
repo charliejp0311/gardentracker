@@ -1,10 +1,25 @@
-import React from 'react';
+import { Component } from "react";
 
-export default function CreatePlant(props){
-    return(
-        <form onSubmit={props.handleSubmit}>
-            <input type='text' onChange={props.handleChange} value={props.state} placeholder='Plant name'/><br/>
-            <input type='submit'/>
-        </form>
-    )
+class Plant extends Component {
+    state = {
+        name: '',
+        notes: [],
+        nutrients: []
+    }
+
+    render(){
+        return(
+            <div>
+                <p>
+                    plant ... each plant will display in a grid with a rout to display the plant log
+                </p>
+                
+                <button>Display Plant Log/Notes</button>
+                
+
+            </div>
+        )
+    }
 }
+
+export default Plant;
