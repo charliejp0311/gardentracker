@@ -32,9 +32,9 @@ const mapStateToProps=state=>{
         nutrients: state.nutrients
     }
 }
-// const mapDispatchToProps = dispatch => {
-//     return{
-//         addPlant: dispatch(addPlant())
-//     }
-// }
-export default connect(mapStateToProps)(Garden);
+const mapDispatchToProps = dispatch => {
+    return{
+        addPlant: dispatch(addPlant())
+    }
+}
+export default connect(mapStateToProps,mapDispatchToProps)(Garden);

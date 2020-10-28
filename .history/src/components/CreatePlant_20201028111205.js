@@ -28,6 +28,10 @@ class CreatePlant extends Component {
     }
 }
 
+const mapDispatchToProps=dispatch=>{
+    return{
+        addPlant: dispatch(addPlant())
+    }
+}
 
-
-export default connect()(CreatePlant);
+export default connect(null,mapDispatchToProps)(CreatePlant);

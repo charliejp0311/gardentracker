@@ -16,13 +16,6 @@ class CreateGarden extends Component{
         plant
         })
     };
-
-    havestPlant=(plant)=>{
-        return{
-            type: 'HARVEST_PLANT',
-            plant
-        }
-    }
     
     render(){
         return(
@@ -30,7 +23,6 @@ class CreateGarden extends Component{
                 <Garden 
                 plants={this.state.plants} 
                 harvestedPlants={this.state.harvest} 
-                harvestPlant={this.harvestPlant}
                 addPlant={this.addPlant}/>
             </div>
         )

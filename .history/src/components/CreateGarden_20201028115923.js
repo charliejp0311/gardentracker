@@ -30,7 +30,6 @@ class CreateGarden extends Component{
                 <Garden 
                 plants={this.state.plants} 
                 harvestedPlants={this.state.harvest} 
-                harvestPlant={this.harvestPlant}
                 addPlant={this.addPlant}/>
             </div>
         )

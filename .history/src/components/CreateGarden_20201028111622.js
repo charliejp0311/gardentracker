@@ -7,7 +7,8 @@ class CreateGarden extends Component{
 
     state = {
         plants: [],
-        harvest: []
+        nutrients: [],
+        archive: []
     }
 
     addPlant=(plant)=>{
@@ -16,26 +17,24 @@ class CreateGarden extends Component{
         plant
         })
     };
-
-    havestPlant=(plant)=>{
-        return{
-            type: 'HARVEST_PLANT',
-            plant
-        }
-    }
     
     render(){
         return(
             <div>
                 <Garden 
                 plants={this.state.plants} 
-                harvestedPlants={this.state.harvest} 
-                harvestPlant={this.harvestPlant}
+                nutrients={this.state.nutrients}
+                archive={this.state.archive} 
                 addPlant={this.addPlant}/>
             </div>
         )
     };
 };
+const mapDispatchToProps=dispatch=>{
+    return{
+        addPlant: dispatch(addPlant())
+    }
+}
 
 
-export default connect()(CreateGarden);
+export default connect(null,mapDispatchToProps)(CreateGarden);

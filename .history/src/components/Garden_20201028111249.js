@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CreatePlant from './CreatePlant';
 import PlantList from './plantList';
-import Archive from "./Harvest";
+import Archive from "./Archive";
 import {connect} from 'react-redux';
 
 
@@ -32,9 +32,5 @@ const mapStateToProps=state=>{
         nutrients: state.nutrients
     }
 }
-// const mapDispatchToProps = dispatch => {
-//     return{
-//         addPlant: dispatch(addPlant())
-//     }
-// }
+
 export default connect(mapStateToProps)(Garden);

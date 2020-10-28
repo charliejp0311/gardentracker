@@ -1,5 +1,4 @@
 import { Component } from "react";
-import { connect } from "react-redux";
 
 class CreatePlant extends Component {
     state = {
@@ -16,7 +15,6 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-
     }
     render(){
         return(
@@ -28,6 +26,4 @@ class CreatePlant extends Component {
     }
 }
 
-
-
-export default connect()(CreatePlant);
+export default CreatePlant;
