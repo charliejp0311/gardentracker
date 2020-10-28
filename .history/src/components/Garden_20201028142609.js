@@ -19,7 +19,7 @@ class Garden extends Component{
                 <h1>Growing is Life</h1>
                 <CreatePlant addPlant={this.props.addPlant} />
                 <PlantList plants={this.state.plants} />
-                <Harvest archive={this.state.harvest} />
+                <Archive archive={this.state.archive} />
             </div>
         )
     }

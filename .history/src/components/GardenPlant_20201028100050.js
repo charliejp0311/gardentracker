@@ -7,7 +7,8 @@ export default function GardenPlant(props){
         <div className='plant'>
             <b>{props.name}</b>
             <button>Display</button>
-            <button onClick={()=>props.harvestPlant(props.id)}>Harvest</button>
+            <button>Archive</button>
+            <button>Delete</button>
         </div>
     )
 }

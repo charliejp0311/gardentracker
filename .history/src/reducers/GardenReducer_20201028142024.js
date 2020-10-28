@@ -7,9 +7,8 @@ export default function garden (state = {
             return state.plants.concat(action.plant)
 
         case 'HARVEST_PLANT':
-            let p = state.plants.filter(plant=>plant.id===action.id) 
-            let inTheGarden = state.plants.filter(plant=>plant!==p)
-            state.setState({plants: inTheGarden })
+            let ps = state.plants.filter(plant=>plant.id!==action.id) 
+            state.setState({plants: ps})
             return state.harvest.concat(action.plant)
     
         default:
