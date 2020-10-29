@@ -7,9 +7,9 @@ export default function garden (state = {
     console.log(action)
     switch (action.type) {
         case 'ADD_PLANT':
+            debugger
             return {
-                ...state,
-                plants: state.plants.concat({name: action.plant.name})
+                // plants: state.plants.concat({name: action.plant.name, id: cuid()})
             };
 
         case 'HARVEST_PLANT':

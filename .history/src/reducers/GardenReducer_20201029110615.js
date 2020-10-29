@@ -8,8 +8,7 @@ export default function garden (state = {
     switch (action.type) {
         case 'ADD_PLANT':
             return {
-                ...state,
-                plants: state.plants.concat({name: action.plant.name})
+                plants: state.plants.concat({name: action.plant.name, id: cuid()})
             };
 
         case 'HARVEST_PLANT':

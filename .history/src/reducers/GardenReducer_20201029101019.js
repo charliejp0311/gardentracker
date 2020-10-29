@@ -1,15 +1,14 @@
-import {cuid} from 'cuid';
+import uuid from 'uuid';
 
 export default function garden (state = {
     plants: [],
     harvest: []
 },action){
-    console.log(action)
     switch (action.type) {
         case 'ADD_PLANT':
             return {
                 ...state,
-                plants: state.plants.concat({name: action.plant.name})
+                plants: state.plants.concat(action.plant)
             };
 
         case 'HARVEST_PLANT':

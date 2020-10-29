@@ -4,12 +4,11 @@ export default function garden (state = {
     plants: [],
     harvest: []
 },action){
-    console.log(action)
     switch (action.type) {
         case 'ADD_PLANT':
             return {
                 ...state,
-                plants: state.plants.concat({name: action.plant.name})
+                plants: state.plants.concat({name: action.plant.name, id: cuid()})
             };
 
         case 'HARVEST_PLANT':

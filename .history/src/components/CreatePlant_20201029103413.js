@@ -40,7 +40,7 @@ class CreatePlant extends Component {
     render(){
         return(
             <form onSubmit={this.handleSubmit}>
-                <input type='text' name='name' placeholder="Plant Name" onChange={this.handleChange} value={this.state.name}/>
+                <input type='text' name='name' placeholder="Plant Name" onChange={this.handleChange}/>
                 <input type='submit'/>
             </form>
         )
