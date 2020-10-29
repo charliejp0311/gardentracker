@@ -7,13 +7,29 @@ import {connect} from 'react-redux';
 
 class Garden extends Component{
 
-    
+    state = {
+        plants: [],
+        harvest: []
+    }
+    addPlant=(plant)=>{
+        return({
+        type: "ADD_PLANT",
+        plant
+        }))
+    };
 
+    harvestPlant=(plant)=>{
+        return{
+            type: 'HARVEST_PLANT',
+            plant
+        }
+    }
     render(){
+        console.log(this.props)
         return(
             <div className='garden-container' >
                 <h1>Growing is Life</h1>
-                <CreatePlant />
+                <CreatePlant addPlant={this.props.dispatch(this.addPlant)} harvestPlant={this.props.dispatch(this.harvestPlant)} />
                 {/* <PlantList plants={this.state.plants} />
                 <Harvest harvest={this.state.harvest} /> */}
             </div>
@@ -26,6 +42,5 @@ const mapStateToProps=state=>{
         harvest: state.harvest,
     }
 }
-
 
 export default connect(mapStateToProps)(Garden);

@@ -8,12 +8,25 @@ import {connect} from 'react-redux';
 class Garden extends Component{
 
     
+    addPlant=(plant)=>{
+        return({
+        type: "ADD_PLANT",
+        plant
+        })
+    };
 
+    harvestPlant=(plant)=>{
+        return{
+            type: 'HARVEST_PLANT',
+            plant
+        }
+    }
     render(){
+        console.log(this.props)
         return(
             <div className='garden-container' >
                 <h1>Growing is Life</h1>
-                <CreatePlant />
+                <CreatePlant addPlant={this.addPlant} harvestPlant={this.harvestPlant} />
                 {/* <PlantList plants={this.state.plants} />
                 <Harvest harvest={this.state.harvest} /> */}
             </div>

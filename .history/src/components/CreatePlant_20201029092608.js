@@ -14,27 +14,15 @@ class CreatePlant extends Component {
 
     handleSubmit=e=>{
         e.preventDefault();
-        this.props.dispatch(this.addPlant(this.state));
+        console.log(this.props)
+        this.props.addPlant({name: this.state.name});
         this.setState({
             name: ''
         })
 
     }
-
-    addPlant=(plant)=>{
-        return({
-        type: "ADD_PLANT",
-        plant
-        })
-    };
-
-    harvestPlant=(plant)=>{
-        return{
-            type: 'HARVEST_PLANT',
-            plant
-        }
-    }
     render(){
+        // console.log(this.props)
         return(
             <form onSubmit={this.handleSubmit}>
                 <input type='text' name='name' placeholder="Plant Name" onChange={this.handleChange}/>
@@ -51,12 +39,12 @@ const mapStateToProps = state => {
     }
 }
 
-// const mapDispatchToProps= dispatch => {
-//     return{
-//         // addPlant: ()=>dispatch(addPlant()),
-//         // harvestPlant: ()=>dispatch(harvestPlant())
-//     }
-// }
+const mapDispatchToProps= dispatch => {
+    return{
+        addPlant: ()=>dispatch(this.addPlant()),
+        harvestPlant: ()=>dispatch(this.harvestPlant())
+    }
+}
 
 
-export default connect(mapStateToProps)(CreatePlant);
+export default connect(mapStateToProps,mapDispatchToProps)(CreatePlant);

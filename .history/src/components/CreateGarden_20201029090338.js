@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
+// import { connect } from 'react-redux';
 import Garden from './Garden';
 
 
 class CreateGarden extends Component{ 
+
+    // state = {
+    //     plants: [],
+    //     harvest: []
+    // }
 
     render(){
         return(
@@ -14,4 +20,4 @@ class CreateGarden extends Component{
 };
 
 
-export default CreateGarden;
+export default (CreateGarden);

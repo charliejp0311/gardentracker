@@ -4,7 +4,7 @@ export default function garden (state = {
 },action){
     switch (action.type) {
         case 'ADD_PLANT':
-            return {...state,plants: state.plants.concat(action.plant)};
+            return state.plants.concat(action.plant);
 
         case 'HARVEST_PLANT':
             let p = state.plants.filter(plant=>plant.id===action.id) ;
